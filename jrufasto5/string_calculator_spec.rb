@@ -14,5 +14,8 @@ describe "StringCalculator" do
     StringCalculator.add('1,2').should == 3
   end
   
+  it "retorna 15 para '1,2,3,4,5'" do
+    StringCalculator.add('1,2,3,4,5').should == 15
+  end
   
 end
