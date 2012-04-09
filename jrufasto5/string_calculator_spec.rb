@@ -22,8 +22,14 @@ describe "StringCalculator" do
     StringCalculator.add('1\n2,3,4').should == 10
   end
 
-  it "should return 6 para '//;\n1;2//;,3'" do
+  it "retorna 6 para '//;\n1;2//;,3'" do
     StringCalculator.add('//;\n1;2//;,3').should == 6
   end
-  
+
+it "llama a raise exception si encuentra un numero negativo" do
+   -> { StringCalculator.add("1,2,-3,5,-7") }.should raise_error("No se permiten negativos")
+   end
+
 end
+
+  
