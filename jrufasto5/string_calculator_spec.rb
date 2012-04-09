@@ -21,5 +21,9 @@ describe "StringCalculator" do
   it "retorna 10 para '1\n2,3,4'" do
     StringCalculator.add('1\n2,3,4').should == 10
   end
+
+  it "should return 6 para '//;\n1;2//;,3'" do
+    StringCalculator.add('//;\n1;2//;,3').should == 6
+  end
   
 end
