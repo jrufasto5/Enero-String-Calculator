@@ -6,7 +6,7 @@ class StringCalculator
 	 	numbers = string.split(%r{[\\n, #{delimiter}]}).map(&:to_i)
 
 	 	negatives = numbers.select {|number| number < 0}
- 	 	raise "No se permiten negativos" if negatives.any?
+ 	 	raise "Numeros negativos no permitidos: #{negatives.join(', ')}" if negatives.any?
 
 	 	numbers.inject(0) {|total, number| total += number }
  	end

@@ -27,7 +27,7 @@ describe "StringCalculator" do
   end
 
 it "llama a raise exception si encuentra un numero negativo" do
-   -> { StringCalculator.add("1,2,-3,5,-7") }.should raise_error("No se permiten negativos")
+   -> { StringCalculator.add("1,-2,3,-5,6") }.should raise_error("Numeros negativos no permitidos: -2, -5")
    end
 
 end
