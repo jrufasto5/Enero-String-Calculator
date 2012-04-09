@@ -17,5 +17,9 @@ describe "StringCalculator" do
   it "retorna 15 para '1,2,3,4,5'" do
     StringCalculator.add('1,2,3,4,5').should == 15
   end
+
+  it "retorna 10 para '1\n2,3,4'" do
+    StringCalculator.add('1\n2,3,4').should == 10
+  end
   
 end
